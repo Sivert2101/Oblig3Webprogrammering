@@ -1,6 +1,7 @@
 package com.example.oblig3webprogrammering;
 
 public class Billet {
+    private int id;
     private String film;
     private int antall;
     private String fornavn;
@@ -14,19 +15,15 @@ public class Billet {
         this.fornavn = fornavn;
         this.telefonnr = telefonnr;
         this.etternavn = etternavn;
-
         this.epost = epost;
     }
 
-    public Billet() {
-    }
+    public Billet(){}
 
     public String getFilm() {
         return film;
     }
-    public void setFilm(String film) {
-        this.film = film;
-    }
+    public void setFilm(String film) { this.film = film; }
 
     public int getAntall() {
         return antall;
