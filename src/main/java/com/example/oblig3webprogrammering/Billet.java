@@ -20,6 +20,11 @@ public class Billet {
 
     public Billet(){}
 
+    public int getid() {
+        return id;
+    }
+    public void setid(int id) { this.id = id; }
+
     public String getFilm() {
         return film;
     }

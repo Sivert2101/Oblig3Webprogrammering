@@ -12,10 +12,10 @@ import java.util.List;
 public class BilletController {
 
     @Autowired
-    private BilletRepository rep;
+    BilletRepository rep;
 
     @PostMapping("/lagre")
-    public void lagreBillet(Billet nyBillet){
+    public void lagreBilleter(Billet nyBillet){
         rep.lagreBillet(nyBillet); }
 
     @GetMapping("/hentAlle")

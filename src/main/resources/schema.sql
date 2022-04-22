@@ -1,6 +1,6 @@
 CREATE TABLE Billet
 (
-    id BIGINT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     film VARCHAR(255) NOT NULL,
     antall INT NOT NULL,
     fornavn VARCHAR(255) NOT NULL,

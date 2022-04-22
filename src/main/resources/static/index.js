@@ -43,7 +43,7 @@ function regBillet() {
     }
 
     if (test) {
-        const billet = {
+        const billett = {
             film: $("#film").val(),
             antall: $("#antall").val(),
             fornavn: $("#fornavn").val(),
@@ -51,24 +51,18 @@ function regBillet() {
             telefonnr: $("#telefonnr").val(),
             epost: $("#epost").val()
         };
-        console.log(billet);
+        console.log(billett);
 
-        $.post("/lagre", billet, function (){
+        $.post("/lagre", billett, function (){
             hentAlle();
-        });
-        $("#film").val("Velg film her");
-        $("#antall").val("");
-        $("#fornavn").val("");
-        $("#etternavn").val("");
-        $("#telefonnr").val("");
-        $("#epost").val("");
+        })
     }
 }
 
 function hentAlle(){
     $.get("/hentAlle", function (data){
         formaterData(data);
-    });
+    })
 }
 
 function formaterData(billet) {
@@ -90,6 +84,13 @@ function formaterData(billet) {
     }
     ut += "</table>";
     $("#billettene").html(ut);
+
+    $("#film").val("Velg film her");
+    $("#antall").val("");
+    $("#fornavn").val("");
+    $("#etternavn").val("");
+    $("#telefonnr").val("");
+    $("#epost").val("");
 }
 
 function slettAlle() {

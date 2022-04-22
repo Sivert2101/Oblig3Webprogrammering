@@ -1,7 +1,5 @@
 package com.example.oblig3webprogrammering;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,8 +12,6 @@ public class BilletRepository {
 
     @Autowired
     private JdbcTemplate db;
-
-    private Logger logger = LoggerFactory.getLogger(BilletRepository.class);
 
     public void lagreBillet(Billet billet){
         String sql ="INSERT INTO Billet (film,antall,fornavn,etternavn,telefonnr,epost) VALUES(?,?,?,?,?,?)";
